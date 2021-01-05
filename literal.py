@@ -19,7 +19,7 @@ print(seventh_string)
 print(eighth_string)
 
 # 원시 문자열
-ninth_string = r"A literal string with a \n new line character printed raw"
+ninth_string = r"A literal string with a \n new line character printed raw" # 이스케이프 문자 무시한다.
 print(ninth_string)
 
 tenth_string = '''A literal string
