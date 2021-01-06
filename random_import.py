@@ -33,13 +33,6 @@ print('Guess number'.center(30))
 print('+' * 30)
 print('Guess a number between 1 and 10')
 
-#random.shuffle()
-#list_data = list(range(1,46)) # 1 ~ 45
-#print(list_data)              # 1 ~ 45
-#random.shuffle(list_data)
-#print(list_data)
-#exit()
-
 value = random.randint(1, 10)
 count = 0
 guess = 0
