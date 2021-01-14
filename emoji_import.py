@@ -1,4 +1,7 @@
+#https://docs.microsoft.com/ko-kr/learn/modules/python-standard-library/4-exercise-pip
+################################################
 # py -m pip install emoji
+################################################
 # import없이 이하와 같이 유니코드로 바로 호출 가능
 print("\U0001f600")
 print("winking face:" + "\N{winking face}")
