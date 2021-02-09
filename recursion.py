@@ -6,7 +6,7 @@ def fib(x):
 
 print(fib(4)) # result is 5
 
-
+## 위의 로직을 한 줄로 표현하면 다음과 같습니다.
 def fibonacciSeqquence(x):
     return fibonacciSeqquence(x-1) + fibonacciSeqquence(x-2) if x >= 2 else 1 
 
