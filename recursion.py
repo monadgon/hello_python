@@ -24,3 +24,13 @@ def fibPrint(x):
     return rtn
 
 print("result:", fibPrint(6))
+
+
+def fibonacci(num):
+    a, b = 0, 1
+    for i in range(num):
+        a, b = b, a+b
+    return a
+print("result:", fibonacci(6) )
+
+#출처: https://excelsior-cjh.tistory.com/31 [EXCELSIOR]

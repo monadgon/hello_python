@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "C:\\Users\\monad\\anaconda3\\envs\\monadenv\\python.exe",
+    "jupyter.jupyterServerType": "local",
+    "terminal.integrated.shellArgs.windows": ["/K", "C:\\Users\\monad\\anaconda3\\Scriptsactivate.bat C:\\Users\\monad\\Anaconda3 & conda activate monadenv"]
+}
