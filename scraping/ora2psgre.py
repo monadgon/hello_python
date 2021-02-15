@@ -25,5 +25,8 @@ target_select.select_by_value('PostgreSQL')
 
 time.sleep(1)
 
+# source textarea ID: #frame_source ... #textarea
+# convert button: #convert_button
+# target textarea ID: #frame_target ... #textarea
 
 #driver.close()
