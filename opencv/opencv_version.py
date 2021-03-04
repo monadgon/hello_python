@@ -33,20 +33,20 @@ cnts = imutils.grab_contours(cnts)
 
 def display(img,count,cmap="gray"):
     f_image = cv2.imread("coins.jpeg")
-    cv2.imshow("f_image", f_image)
+    #cv2.imshow("f_image", f_image)
     
-    cv2.imshow("img", img)
-    cv2.waitKey(0)
+    #cv2.imshow("img", img)
+    #cv2.waitKey(0)
     
     f, axs = plt.subplots(1,2,figsize=(12,5))
     axs[0].imshow(f_image,cmap="gray")
     axs[1].imshow(img,cmap="gray")
     axs[1].set_title("Total Money Count = {}".format(count))
+    plt.show()
 
 for (i, c) in enumerate(cnts):
     ((x, y), _) = cv2.minEnclosingCircle(c)
-    cv2.putText(image, "#{}".format(i + 1), (int(x) - 45, int(y)+20),
-		cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 0), 5)
+    cv2.putText(image, "#{}".format(i + 1), (int(x) - 45, int(y)+20), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 0), 5)
     cv2.drawContours(image, [c], -1, (0, 255, 0), 2)
 
 display(image,len(cnts))
