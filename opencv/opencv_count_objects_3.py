@@ -9,7 +9,7 @@ import numpy as np
 ### YUV color space로 converting한 뒤 Y에 대해 연산을 진행
 img = cv2.imread('opencv\pills2.jpg')
 img_YUV = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)    
-y = img_YUV[::0]    
+y = img_YUV[::1] # img_YUV[::0]: ValueError: slice step cannot be zero
  
 rows = y.shape[0]    
 cols = y.shape[1]
