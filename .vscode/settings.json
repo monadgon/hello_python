@@ -1,10 +1,7 @@
 {
-<<<<<<< HEAD
+
     "python.pythonPath": "C:\\Python3.9.1\\python.exe",
     "python.linting.pylintArgs": [
         "--generated-members=cv2.*"
     ]
-=======
-
->>>>>>> 25b022d4acc7a1e25e6df948795b85efdaab2569
 }
