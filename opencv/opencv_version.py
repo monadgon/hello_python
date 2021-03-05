@@ -8,16 +8,22 @@ import matplotlib.pyplot as plt
 
 #print(cv2.__version__)
 
-image = cv2.imread("coins.jpeg")
+#img_path = "coins.jpeg"
+img_path = "20210125 134244-1.png"
+
+
+image = cv2.imread(img_path)
 if image is None:
     print("Failed to load your image!!")
     sys.exit()
 
-image_blur = cv2.medianBlur(image,25)
+#image_blur = cv2.medianBlur(image,25)
+image_blur = cv2.medianBlur(image,15)
 
 image_blur_gray = cv2.cvtColor(image_blur, cv2.COLOR_BGR2GRAY)
 
-image_res ,image_thresh = cv2.threshold(image_blur_gray,240,255,cv2.THRESH_BINARY_INV)
+#image_res ,image_thresh = cv2.threshold(image_blur_gray,240,255,cv2.THRESH_BINARY_INV)
+image_res ,image_thresh = cv2.threshold(image_blur_gray, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)
 
 kernel = np.ones((3,3),np.uint8)
 
@@ -27,12 +33,11 @@ dist_transform = cv2.distanceTransform(opening,cv2.DIST_L2,5)
 ret, last_image =  cv2.threshold(dist_transform, 0.3*dist_transform.max(),255,0)
 last_image = np.uint8(last_image)
 
-cnts = cv2.findContours(last_image.copy(), cv2.RETR_EXTERNAL,
-	cv2.CHAIN_APPROX_SIMPLE)
+cnts = cv2.findContours(last_image.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 cnts = imutils.grab_contours(cnts)
 
 def display(img,count,cmap="gray"):
-    f_image = cv2.imread("coins.jpeg")
+    f_image = cv2.imread(img_path)
     #cv2.imshow("f_image", f_image)
     
     #cv2.imshow("img", img)
